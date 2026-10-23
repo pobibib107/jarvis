@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 모바일/스마트폰 화면 크기 자동 맞춤 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해남고 자비스</title>
+    <link rel="stylesheet" href="웹사이트 디자인.css">
+</head>
+<body>
+
+    <!-- 1.서비스 제목 및 상태 -->
+    <header class="chat-header">
+        <h1>Haenam High-school J.A.R.V.I.S</h1>
+        <span class="status-badge">online (Raspberry Pi Connected)</span>
+    </header>
+
+    <!-- 2.사용자 및 AI의 말풍선들이 들어갈 상자 -->
+    <main class="chat-container" id="chatContainer">
+        
+        <!-- AI 기본 안내 메시지 (초기 상태) -->
+        <div class="message bot-message">
+            <div class="sender-name">J.A.R.V.I.S</div>
+            <div class="message-bubble">
+                궁금한점 물어보세요
+            </div>
+        </div>
+
+        <!-- 사용자가 보낸 예시 메시지 -->
+        <div class="message user-message">
+            <div class="sender-name">나</div>
+            <div class="message-bubble">
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 질문 작성 및 전송 버튼 -->
+    <form class="input-container" id="chatForm">
+        <input 
+            type="text" 
+            id="userInput" 
+            placeholder="질문을 입력하세요... (예: 도서관 대출 규정)" 
+            autocomplete="off" 
+            required
+        >
+        <button type="submit" id="sendBtn">전송</button>
+    </form>
+    <script src="웹사이트 자바.js"></script>
+</body>
+</html>
